@@ -40,6 +40,7 @@ Installing `apache-airflow-providers-microsoft-azure` from the `conda-forge` cha
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `apache-airflow-providers-microsoft-azure` can be installed with:
