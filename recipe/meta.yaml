@@ -21,7 +21,6 @@ requirements:
     - python >=3.6
     - pip
     - setuptools
-    - wheel
   run:
     - python >=3.6
     - apache-airflow >=2.1.0
@@ -38,6 +37,9 @@ requirements:
     - azure-storage-blob >=12.7.0
     - azure-storage-common >=2.1.0
     - azure-storage-file >=2.1.0
+    # temporary constraint to make pip check happy
+    # see https://github.com/conda-forge/msal_extensions-feedstock/pull/12
+    - portalocker >=1.6,<2.0
 
 test:
   imports:
