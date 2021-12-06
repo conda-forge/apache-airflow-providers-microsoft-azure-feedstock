@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-microsoft-azure" %}
-{% set version = "3.3.0" %}
+{% set version = "3.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-microsoft-azure-{{ version }}.tar.gz
-  sha256: f991ef79ff3b99e6fca7a814b80011a3675cf3f89a922c0583c64aa4d8773c6f
+  sha256: 5e76f6d2e268fb5eb52d7ac5fe2847090d111b0038d2291df75d428153aba864
   patches:
     - 0001-remove-azure-keyvault-metapackage.patch
 
