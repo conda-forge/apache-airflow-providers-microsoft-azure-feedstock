@@ -8,13 +8,11 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-microsoft-azure-{{ version }}.tar.gz
   sha256: 25908c91fc70c5612f61eafcd7821ba282a0841c0b7a383561116c856953a0bd
-  patches:
-    - 0001-remove-azure-keyvault-metapackage.patch
 
 build:
-  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
@@ -49,9 +47,10 @@ test:
 
 about:
   home: https://airflow.apache.org/
-  summary: Provider for Microsoft Azure for Apache Airflow
+  summary: Provider for Apache Airflow. Implements apache-airflow-providers-microsoft-azure package
   license: Apache-2.0
   license_file: LICENSE
+  license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-microsoft-azure/stable/index.html
   dev_url: https://github.com/apache/airflow/
 
