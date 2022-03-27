@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-microsoft-azure-{{ version }}.tar.gz
   sha256: 25908c91fc70c5612f61eafcd7821ba282a0841c0b7a383561116c856953a0bd
+  patches:
+    - 0001-remove-azure-keyvault-metapackage.patch
 
 build:
   noarch: python
@@ -26,7 +28,12 @@ requirements:
     - azure-cosmos >=4.0.0
     - azure-datalake-store >=0.0.45
     - azure-identity >=1.3.1
-    - azure-keyvault >=4.1.0
+    # conda metapackage for azure-keyvault has tighter constraints than the pypi version
+    # - azure-keyvault >=4.1.0
+    - azure-keyvault-certificates >=4.1.0,<5
+    - azure-keyvault-keys >=4.1.0,<5
+    - azure-keyvault-secrets >=4.1.0,<5
+
     - azure-kusto-data >=0.0.43,<0.1
     - azure-mgmt-containerinstance >=1.5.0,<2.0
     - azure-mgmt-datafactory >=1.0.0,<2.0
