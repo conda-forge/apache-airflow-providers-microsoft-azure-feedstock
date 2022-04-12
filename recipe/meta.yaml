@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-microsoft-azure" %}
-{% set version = "3.7.2" %}
+{% set version = "3.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,9 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-microsoft-azure-{{ version }}.tar.gz
-  sha256: 25908c91fc70c5612f61eafcd7821ba282a0841c0b7a383561116c856953a0bd
-  patches:
-    - 0001-remove-azure-keyvault-metapackage.patch
+  sha256: 374608da488931c0fbd5646167e512dcb3773bf530f42a91897b28450868b2bc
 
 build:
   noarch: python
@@ -28,12 +26,7 @@ requirements:
     - azure-cosmos >=4.0.0
     - azure-datalake-store >=0.0.45
     - azure-identity >=1.3.1
-    # conda metapackage for azure-keyvault has tighter constraints than the pypi version
-    # - azure-keyvault >=4.1.0
-    - azure-keyvault-certificates >=4.1.0,<5
-    - azure-keyvault-keys >=4.1.0,<5
-    - azure-keyvault-secrets >=4.1.0,<5
-
+    - azure-keyvault-secrets >=4.1.0,<5.0
     - azure-kusto-data >=0.0.43,<0.1
     - azure-mgmt-containerinstance >=1.5.0,<2.0
     - azure-mgmt-datafactory >=1.0.0,<2.0
@@ -56,7 +49,9 @@ about:
   home: https://airflow.apache.org/
   summary: Provider for Apache Airflow. Implements apache-airflow-providers-microsoft-azure package
   license: Apache-2.0
-  license_file: LICENSE
+  license_file:
+    - LICENSE
+    - NOTICE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-microsoft-azure/stable/index.html
   dev_url: https://github.com/apache/airflow/
