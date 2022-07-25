@@ -5,21 +5,22 @@ package:
   name: {{ name|lower }}
   version: {{ version }}
 
-build:
-  skip: true  # [py<37]
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 0
-
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-microsoft-azure-{{ version }}.tar.gz
   sha256: ce0de121d8d558a24e5ba36ea5c69655a26993d8bfc25c9b4f5642f1acce34a9
 
+build:
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
+
 requirements:
   host:
+    - python >=3.7
     - pip
-    - python
     - setuptools
   run:
+    - python >=3.7
     - apache-airflow >=2.2.0
     - azure-batch >=8.0.0
     - azure-cosmos >=4.0.0
@@ -35,7 +36,6 @@ requirements:
     - azure-storage-blob >=12.7.0,<12.9.0
     - azure-storage-common >=2.1.0
     - azure-storage-file >=2.1.0
-    - python
 
 test:
   imports:
