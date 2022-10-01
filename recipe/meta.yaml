@@ -10,17 +10,17 @@ source:
   sha256: 05d34979bd4f56f83d32d8695b0c849650df926eb53b7fd3db4be852dd8624c0
 
 build:
-  noarch: python
+  skip: true  # [py<37]
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
 requirements:
   host:
-    - python >=3.7
-    - pip
+    - python
     - setuptools
+    - pip
   run:
-    - python >=3.7
+    - python
     - apache-airflow >=2.2.0
     - azure-batch >=8.0.0
     - azure-cosmos >=4.0.0
@@ -32,9 +32,11 @@ requirements:
     - azure-mgmt-datafactory >=1.0.0,<2.0
     - azure-mgmt-datalake-store >=0.5.0
     - azure-mgmt-resource >=2.2.0
+    - azure-servicebus >=7.6.1
     - azure-storage-blob >=12.7.0,<12.9.0
     - azure-storage-common >=2.1.0
     - azure-storage-file >=2.1.0
+    - azure-synapse-spark
 
 test:
   imports:
