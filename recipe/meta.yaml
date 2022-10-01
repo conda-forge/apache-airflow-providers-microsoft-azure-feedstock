@@ -10,17 +10,17 @@ source:
   sha256: 05d34979bd4f56f83d32d8695b0c849650df926eb53b7fd3db4be852dd8624c0
 
 build:
-  skip: true  # [py<37]
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
 requirements:
   host:
-    - python
+    - python >=3.7
     - setuptools
     - pip
   run:
-    - python
+    - python >=3.7
     - apache-airflow >=2.2.0
     - azure-batch >=8.0.0
     - azure-cosmos >=4.0.0
