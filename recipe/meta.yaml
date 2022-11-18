@@ -17,11 +17,13 @@ build:
 requirements:
   host:
     - python >=3.7
-    - pip
+    - python
     - setuptools
+    - pip
   run:
     - python >=3.7
-    - apache-airflow >=2.2.0
+    - adal >=1.2.7
+    - apache-airflow >=2.3.0
     - azure-batch >=8.0.0
     - azure-cosmos >=4.0.0
     - azure-datalake-store >=0.0.45
@@ -32,9 +34,11 @@ requirements:
     - azure-mgmt-datafactory >=1.0.0,<2.0
     - azure-mgmt-datalake-store >=0.5.0
     - azure-mgmt-resource >=2.2.0
-    - azure-storage-blob >=12.7.0,<12.9.0
+    - azure-servicebus >=7.6.1
+    - azure-storage-blob >=12.14.0
     - azure-storage-common >=2.1.0
     - azure-storage-file >=2.1.0
+    - azure-synapse-spark
 
 test:
   imports:
