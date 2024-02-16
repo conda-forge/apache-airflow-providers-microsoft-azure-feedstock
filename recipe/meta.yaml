@@ -16,12 +16,20 @@ build:
 
 requirements:
   host:
+<<<<<<< HEAD
     - python >=3.8,<4.0
+=======
+    - python >=3.8,<4.dev0
+>>>>>>> df07e44 (Update recipe with my grayskull autoupdate script)
     - flit-core >=3.2,<4
     - pip
     - setuptools
   run:
+<<<<<<< HEAD
     - python >=3.8,<4.0
+=======
+    - python >=3.8
+>>>>>>> df07e44 (Update recipe with my grayskull autoupdate script)
     - adal >=1.2.7
     - adlfs >=2023.10.0
     - apache-airflow >=2.6.0
