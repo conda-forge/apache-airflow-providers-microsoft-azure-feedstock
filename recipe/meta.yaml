@@ -47,7 +47,7 @@ requirements:
 
 test:
   imports:
-    - apache_airflow_providers_microsoft_azure
+    - airflow.providers.microsoft.azur
   commands:
     - pip check
   requires:
