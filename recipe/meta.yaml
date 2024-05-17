@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-microsoft-azure" %}
-{% set version = "10.0.0" %}
+{% set version = "10.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_microsoft_azure-{{ version }}.tar.gz
-  sha256: 2a31b9f61ebdcf283aa10b585a3271c785bc54834c30f3c023273ed4731d7b6c
+  sha256: 73357a573583561578a3c91a2a6ad74a37777244462c7ea1fb3fc412e32187db
 
 build:
   noarch: python
@@ -21,10 +21,11 @@ requirements:
     - pip
     - setuptools
   run:
+    - msgraph-core >=1.0.0
     - python >=3.8
     - adal >=1.2.7
     - adlfs >=2023.10.0
-    - apache-airflow >=2.6.0
+    - apache-airflow >=2.7.0
     - azure-batch >=8.0.0
     - azure-cosmos >=4.6.0
     - azure-datalake-store >=0.0.45
