@@ -20,7 +20,7 @@ requirements:
     - flit-core >=3.2,<4
     - pip
   run:
-    - python >=3.8
+    - python >=3.8,<4.dev0
     - adal >=1.2.7
     - adlfs >=2023.10.0
     - apache-airflow >=2.7.0
