@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-microsoft-azure" %}
-{% set version = "10.5.1" %}
+{% set version = "11.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_microsoft_azure-{{ version }}.tar.gz
-  sha256: e304d1a9810ad7a23ea70a7474570dafd65456010ceff420dffa3741aefcdb7c
+  sha256: f02d4051a0d3108f42dd665babb20d244fc9e8614336277186eb7b5874a849d5
 
 build:
   noarch: python
@@ -20,6 +20,10 @@ requirements:
     - flit-core >=3.2,<4
     - pip
   run:
+    - microsoft-kiota-abstractions <1.4.0
+    - microsoft-kiota-http >=1.3.0,!=1.3.4
+    - microsoft-kiota-serialization-json ==1.0.0
+    - microsoft-kiota-serialization-text ==1.0.0
     - python >=3.9,<4.dev0
     - adal >=1.2.7
     - adlfs >=2023.10.0
