@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-microsoft-azure" %}
-{% set version = "12.2.0" %}
+{% set version = "12.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_microsoft_azure-{{ version }}.tar.gz
-  sha256: 122094a9dbe1e49c86b7046982dcb6f09a034ea1b7d9916a59a735af0276e04f
+  sha256: b3ccf2c6d4acc86c336db1974d8f54a034d1bbcd05508004461d5812b0cdf91b
 
 build:
   noarch: python
