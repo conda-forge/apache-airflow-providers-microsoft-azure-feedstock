@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-microsoft-azure" %}
-{% set version = "12.2.2" %}
+{% set version = "12.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_microsoft_azure-{{ version }}.tar.gz
-  sha256: 590aa8871ce56a7a2d3214884014f08399def43875f67adea6ccaad581b9352b
+  sha256: b6d6656de57e6c9a24c60ac2e4150593dfb1fa286164a9dbc780ddcf6814488e
 
 build:
   noarch: python
@@ -44,11 +44,11 @@ requirements:
     - azure-mgmt-datafactory >=2.0.0
     - azure-mgmt-containerregistry >=8.0.0
     - azure-mgmt-containerinstance >=10.1.0
-    - msgraph-core >=1.0.0,!=1.1.8
-    - microsoft-kiota-http >=1.3.0,!=1.3.4
-    - microsoft-kiota-serialization-json ==1.0.0
-    - microsoft-kiota-serialization-text ==1.0.0
-    - microsoft-kiota-abstractions <1.4.0
+    - msgraph-core >=1.3.3
+    - microsoft-kiota-http >=1.8.0,<2.0.0
+    - microsoft-kiota-serialization-json >=1.8.0
+    - microsoft-kiota-serialization-text >=1.8.0
+    - microsoft-kiota-abstractions >=1.8.0,<2.0.0
     - msal_extensions >=1.1.0
 
 test:
