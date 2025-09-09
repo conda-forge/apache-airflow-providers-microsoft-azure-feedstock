@@ -44,7 +44,6 @@ requirements:
     - azure-mgmt-datafactory >=2.0.0
     - azure-mgmt-containerregistry >=8.0.0
     - azure-mgmt-containerinstance >=10.1.0
-    - flask-appbuilder >=4.0.0
     - msgraph-core >=1.3.3
     - microsoft-kiota-authentication-azure >=1.9.4,<2.0.0
     - microsoft-kiota-http >=1.9.4,<2.0.0
@@ -52,7 +51,6 @@ requirements:
     - microsoft-kiota-serialization-text >=1.9.4
     - microsoft-kiota-abstractions >=1.9.4,<2.0.0
     - msal_extensions >=1.3.0
-    - portalocker >=2.8.1
 
 test:
   imports:
