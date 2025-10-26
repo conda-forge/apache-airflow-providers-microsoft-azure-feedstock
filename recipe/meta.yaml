@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-microsoft-azure" %}
-{% set version = "12.7.1" %}
+{% set version = "12.8.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_microsoft_azure-{{ version }}.tar.gz
-  sha256: e376eb16a985e2afbba3f5a80d0ab6f2081c587503bafc1d3f66611e35aa0426
+  sha256: de5d04aca62d54b60e8a4d88e7cfde6269e9b98846882c09d4d89120d86eeb4f
 
 build:
   noarch: python
@@ -21,6 +21,8 @@ requirements:
     - flit-core ==3.12.0
     - pip
   run:
+    - apache-airflow-providers-common-compat >=1.8.0
+    - msgraphfs >=0.3.0
     - python >={{ python_min }}
     - apache-airflow >=2.10.0
     - adlfs >=2023.10.0
