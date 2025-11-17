@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-microsoft-azure" %}
-{% set version = "12.8.0" %}
+{% set version = "12.8.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_microsoft_azure-{{ version }}.tar.gz
-  sha256: de5d04aca62d54b60e8a4d88e7cfde6269e9b98846882c09d4d89120d86eeb4f
+  sha256: da14ec51ea44809ca8ee794ee4d7f39233ce31397e5668849053cbb935729917
 
 build:
   noarch: python
@@ -41,7 +41,7 @@ requirements:
     - azure-synapse-artifacts >=0.17.0
     - adal >=1.2.7
     - azure-storage-file-datalake >=12.9.1
-    - azure-kusto-data >=4.1.0,!=4.6.0
+    - azure-kusto-data >=4.1.0,!=4.6.0,!=5.0.0
     - azure-mgmt-datafactory >=2.0.0
     - azure-mgmt-containerregistry >=8.0.0
     - azure-mgmt-containerinstance >=10.1.0
