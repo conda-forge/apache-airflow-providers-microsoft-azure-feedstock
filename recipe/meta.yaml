@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-microsoft-azure" %}
-{% set version = "12.8.1" %}
+{% set version = "12.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_microsoft_azure-{{ version }}.tar.gz
-  sha256: da14ec51ea44809ca8ee794ee4d7f39233ce31397e5668849053cbb935729917
+  sha256: 02dd5c810ffa9ff60432c861fee24b369ba170c7e1118423635789b772438815
 
 build:
   noarch: python
@@ -21,8 +21,8 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - apache-airflow >=2.10.0
-    - apache-airflow-providers-common-compat >=1.8.0
+    - apache-airflow >=2.11.0
+    - apache-airflow-providers-common-compat >=1.10.0
     - adlfs >=2023.10.0
     - azure-batch >=8.0.0
     - azure-cosmos >=4.6.0
