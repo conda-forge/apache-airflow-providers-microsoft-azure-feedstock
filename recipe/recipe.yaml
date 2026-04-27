@@ -55,7 +55,7 @@ requirements:
     - msal_extensions >=1.3.0
 
     # bad dependencies:
-    authlib !=1.7.0
+    - authlib !=1.7.0
 
 tests:
   - python:
