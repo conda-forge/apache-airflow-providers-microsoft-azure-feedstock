@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-microsoft-azure
-  version: "13.3.0"
+  version: "13.4.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_microsoft_azure-${{ version }}.tar.gz
-  sha256: fc18afd5f9b0f40cb9ad5b8bf907982213f4a2b12aa97916d07e170789e8f600
+  sha256: 506c31f1aa4394072f224ad4b1eb6205850562423c02ac67cef3d276b8798387
 
 build:
   noarch: python
@@ -40,7 +40,7 @@ requirements:
     - azure-synapse-spark >=0.2.0
     - azure-synapse-artifacts >=0.17.0
     - azure-storage-file-datalake >=12.9.1
-    - azure-kusto-data >=4.1.0,!=4.6.0,!=5.0.0
+    - azure-kusto-data >=4.1.0,!=5.0.0
     - azure-mgmt-datafactory >=2.0.0
     - azure-mgmt-containerregistry >=8.0.0
     - azure-mgmt-compute >=33.0.0
