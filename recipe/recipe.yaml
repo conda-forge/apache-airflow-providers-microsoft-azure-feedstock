@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-microsoft-azure
-  version: "15.3.0"
+  version: "15.3.1"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_microsoft_azure-${{ version }}.tar.gz
-  sha256: a6c9c8308e1b0a4b63eb843ca07637f9c1984fb99b35e664898ee43757f0cdfd
+  sha256: 96d39f5c2db12b7bc46c792f0932c59864748cce4a055b06917aa6d68ce303e8
 
 build:
   noarch: python
